@@ -12,7 +12,10 @@ import { AgendaService } from 'src/app/services/agenda.service';
 })
 export class AgendaListComponent implements OnInit {
   _response!:ResponseModel<Agenda>;
-  sizes!:number[];
+  _sizes!:number[];
+  _next:boolean=false;
+  _previous:boolean=false;
+  
   agendas!:Agenda[];
   dataLoaded=false;
 

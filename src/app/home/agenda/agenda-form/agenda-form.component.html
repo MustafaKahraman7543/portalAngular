@@ -1,0 +1,59 @@
+
+<div class="container">
+    <!-- <span *ngIf="!editing">
+            <p class="h4 text-white ">
+                Yeni Gündem Ekle
+            </p>{{i.id}} - 
+        </span> -->
+
+    <div class="row justify-content-center">
+        <div class="col-lg">
+            <div class="form-signin w-100  w-100 m-auto ">
+                <div class="card m-3  " style="width: 450px;">
+                    <div class="card-header bg-primary" *ngIf="isAdd" >
+                        <h1 class="h3 ">Gündem Ekle</h1>
+                    </div>
+                    <div class="card-header bg-warning" *ngIf="isUpdate">
+                        <h1 class="h3" *ngIf="isUpdate">Gündemi Güncelle</h1>
+                    </div>
+                    <div class="card-header bg-danger" *ngIf="isDelete">
+                        <h1 class="h3" *ngIf="isDelete">Gündemi Sil</h1>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="agendaForm">
+                            <div class="form-group">
+                               
+                                <div class="mb-3">
+                                    <label for="name" class="form-label" form>Gündem Adı</label>
+                                    <input formControlName="name" type="email" class="form-control" id="name"
+                                        placeholder="Gündem Adı giriniz">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="description" class="form-label">Açıklama</label>
+                                    <textarea formControlName="description" class="form-control" id="description"
+                                        rows="3" placeholder="Açıklama giriniz..."></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="finish" class="form-label" form>Gündem Durumu</label>
+                                    <select formControlName="finish" type="" class="form-control form-select"
+                                        id="finish"> 
+                                        <option [ngValue]="false" >Devam Ediyor</option>
+                                        <option [ngValue]="true" selected > Tamamlandı</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer d-grid gap-2">
+                        <button class="btn btn-outline-primary btn-lg btn-block" *ngIf="isAdd" (click)="add()">Kaydet</button>
+                        <button class="btn btn-outline-warning btn-lg btn-block " *ngIf="isUpdate" (click)="update()">Güncelle</button>
+                        <button class="btn btn-outline-danger btn-lg btn-block " *ngIf="isDelete" (click)="delete()">Sil</button>
+                        <button class="btn btn-outline-success btn-lg btn-block" *ngIf="!isAdd" routerLink="/agenda/add" >Yeni
+                            Gündem</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

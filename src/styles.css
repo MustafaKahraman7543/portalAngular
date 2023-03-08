@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-color: #f5f5f5;}
+.toast {
+      opacity: 1 !important;
+  }
+/* 
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+} */
+
+.form-signin {
+  max-width: 300px;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+}
+
+a{
+     cursor: pointer;
+}
+
+
+.hoverme {
+  cursor: pointer;
+  position: relative;
+}
+
+.hoverme .hoverdescription {
+  visibility: hidden;
+  min-width: 100px;
+  background-color: rgb(9, 9, 9);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+
+  /* Position the tooltip */
+  position: absolute;
+  top:35px;
+  z-index: 1;
+}
+
+.hoverme:hover .hoverdescription {
+  visibility: visible;
+}

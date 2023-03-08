@@ -1,0 +1,14 @@
+<i class=" fa fa-edit"></i><i class="fa-solid fa-pencil"></i>
+
+<form [formGroup]="agendaAddForm">
+    <div class="form-group">
+        <div class="mb-3">
+            <label for="finish" class="form-label" form>Gündem Durumu</label>
+            <select formControlName="finish" type="" class="form-control form-select" id="finish">
+                <option value=false>Devam Ediyor</option>
+                <option value=true> Tamamlandı</option>
+            </select>
+        </div>
+    </div>
+</form>
+<button class="btn btn-primary btn-lg btn-block" (click)="add()">Kaydet</button>

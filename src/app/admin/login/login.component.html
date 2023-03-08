@@ -1,0 +1,22 @@
+<div class="form-signin w-75 m-auto ">
+    <form [formGroup]="loginForm" class="pt-5 mt-5 ">
+      <h1 class="h2 mb-3 fw-normal text-center fw-normal">Giriş Yap</h1>
+  
+      <div class="form-floating ">
+        <input formControlName="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating mt-3  ">
+        <input formControlName="password" type="password" class="form-control" id="floatingPassword" placeholder="password">
+        <label for="floatingPassword">Şifre</label>
+      </div>
+  
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" (click)="login()">Giriş Yap</button>
+  
+    </form>
+  </div>

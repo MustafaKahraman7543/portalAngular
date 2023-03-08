@@ -19,7 +19,7 @@ export class AgendaListComponent implements OnInit {
   textWithSpans: string="";
   link1:string="<a class='page-link' >Next</a>";
   constructor(private agendaService:AgendaService, private router:Router, private toastrService:ToastrService){}
-
+ 
   ngOnInit(): void {
     this.getAgendas();
     //const originalText = '<a href="#">link</a> <a href="#">link</a>';
@@ -38,7 +38,7 @@ export class AgendaListComponent implements OnInit {
   }
 
   getSizes(){
-    
+
   }
   convertLinksToSpans(text: string): string {
     return text.replace(/<a /g, '<span ').replace(/<\/a>/g, '</span>');
